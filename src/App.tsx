@@ -20,7 +20,7 @@ function App() {
       <h1>TEST</h1>
       <button
         onClick={handleThemeSwitch}
-        className="p-4 bg-green-500 rounded-lg dark:bg-red-500"
+        className="p-4 bg-light-primary rounded-lg dark:bg-dark-primary"
       >
         Test Button
       </button>
