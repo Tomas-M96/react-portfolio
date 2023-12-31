@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes backgroundFade {
+    from {
+      background-color: #F4FAFF;
+    }
+    to {
+      background-color: #111D4A;
+    }
+  }
+  
+  .fade-background {
+    animation: backgroundFade 2s ease-in-out infinite alternate;
+  }
+  

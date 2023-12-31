@@ -13,7 +13,7 @@ export default {
             primary: "#FFC15E",
             secondary: "#FF9F2C",
           },
-          text: "#000B14",
+          text: "#111D4A",
         },
         dark: {
           background: "#111D4A",
@@ -23,7 +23,7 @@ export default {
             primary: "#FFC15E",
             secondary: "#FF9F2C",
           },
-          text: "#111D4A",
+          text: "#F4FAFF",
         },
       },
     },
