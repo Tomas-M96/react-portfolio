@@ -7,6 +7,7 @@ import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 //TO-DO: Add dark mode checking to the App component and use context
 
@@ -42,16 +43,16 @@ const Navbar = () => {
       </div>
       <div className="flex flex-row gap-4">
         <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
-          Home
+          <Link to={"/"}>Home</Link>
         </button>
         <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
-          About
+          <Link to={"/about"}>About</Link>
         </button>
         <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
-          Projects
+          <Link to={"/projects"}>Projects</Link>
         </button>
         <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
-          Contact
+          <Link to={"/contact"}>Contact</Link>
         </button>
       </div>
       <div className="grow basis-0 flex flex-row justify-end gap-4">

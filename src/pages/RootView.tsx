@@ -1,10 +1,10 @@
-import HomePage from "./components/HomePage";
-import Navbar from "./components/Navbar";
+import { Outlet } from "react-router";
+import Navbar from "../components/Navbar";
 
-function App() {
+const RootView = () => {
   return (
     <div
-      data-testid="app"
+      id="root-view"
       className="h-screen w-full bg-light-background dark:bg-dark-background dark:text-dark-text font-[poppins] "
     >
       <section
@@ -13,11 +13,9 @@ function App() {
       >
         <Navbar />
       </section>
-      <section id="home-section" className="max-w-[1440px] mx-auto h-screen">
-        <HomePage />
-      </section>
+      <Outlet />
     </div>
   );
-}
+};
 
-export default App;
+export default RootView;
