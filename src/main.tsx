@@ -7,9 +7,10 @@ import "@fontsource/poppins"; // Defaults to weight 400
 import "@fontsource/poppins/400.css"; // Specify weight
 import "@fontsource/poppins/400-italic.css"; // Specify weight and style
 import ErrorPage from "./pages/ErrorPage.tsx";
-import About from "./components/About.tsx";
 import RootView from "./pages/RootView.tsx";
-import HomePage from "./components/HomeContent.tsx";
+import HomePage from "./pages/HomePage.tsx";
+import ProjectsPage from "./pages/ProjectsPage.tsx";
+import ContactPage from "./pages/ContactPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,16 +23,12 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/about",
-        element: <About />,
-      },
-      {
         path: "/projects",
-        element: <div>projects</div>,
+        element: <ProjectsPage />,
       },
       {
         path: "/contact",
-        element: <div>contact</div>,
+        element: <ContactPage />,
       },
     ],
   },
