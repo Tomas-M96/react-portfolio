@@ -14,13 +14,14 @@ export default {
             secondary: "#FF9F2C",
           },
           text: "#111D4A",
+          input: "#E9F0F6",
         },
         dark: {
           background: "#111D4A",
-          primary: "#7CC6FE",
+          primary: "#FFC15E",
           secondary: "#837A75",
           accent: {
-            primary: "#FFC15E",
+            primary: "#7CC6FE",
             secondary: "#FF9F2C",
           },
           text: "#F4FAFF",
