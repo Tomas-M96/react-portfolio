@@ -14,6 +14,7 @@ export default {
             secondary: "#FF9F2C",
           },
           text: "#111D4A",
+          input: "#E9F0F6",
         },
         dark: {
           background: "#111D4A",

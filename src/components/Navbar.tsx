@@ -38,15 +38,9 @@ const Navbar = () => {
       data-testid="navbar"
       className="flex flex-wrap items-center justify-between text-xl"
     >
-      <div className="grow basis-0">
-        <h2>Logo</h2>
-      </div>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-8">
         <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
           <Link to={"/"}>Home</Link>
-        </button>
-        <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
-          <Link to={"/about"}>About</Link>
         </button>
         <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
           <Link to={"/projects"}>Projects</Link>
@@ -55,7 +49,7 @@ const Navbar = () => {
           <Link to={"/contact"}>Contact</Link>
         </button>
       </div>
-      <div className="grow basis-0 flex flex-row justify-end gap-4">
+      <div className="grow basis-0 flex flex-row justify-end gap-8">
         <button
           onClick={socialsClickHandler.bind(null, "github")}
           title="github"
