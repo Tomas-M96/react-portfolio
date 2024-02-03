@@ -1,3 +1,5 @@
+import Button from "../components/generic/Button";
+
 const ErrorPage = () => {
   return (
     <div
@@ -6,9 +8,7 @@ const ErrorPage = () => {
     >
       <section className="flex flex-col gap-4 text-center items-center justify-center h-full">
         <h1 className="text-5xl">Oops, something went wrong!</h1>
-        <button className="py-[16px] px-[16px] bg-light-primary dark:bg-dark-primary text-light-text dark:text-light-text rounded-lg">
-          Go Back
-        </button>
+        <Button>Go Back</Button>
       </section>
     </div>
   );

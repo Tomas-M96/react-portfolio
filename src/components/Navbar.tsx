@@ -36,16 +36,16 @@ const Navbar = () => {
   return (
     <nav
       data-testid="navbar"
-      className="flex flex-wrap items-center justify-between text-xl"
+      className="flex flex-wrap items-center justify-between text-xl hidden md:flex max-[1448px]:mx-[48px]"
     >
       <div className="flex flex-row gap-8">
-        <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
+        <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary-main hover:dark:decoration-dark-primary-main">
           <Link to={"/"}>Home</Link>
         </button>
-        <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
+        <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary-main hover:dark:decoration-dark-primary-main">
           <Link to={"/projects"}>Projects</Link>
         </button>
-        <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary hover:dark:decoration-dark-primary">
+        <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary-main hover:dark:decoration-dark-primary-main">
           <Link to={"/contact"}>Contact</Link>
         </button>
       </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
         >
           <FontAwesomeIcon
             icon={faSquareGithub}
-            className="w-10 h-10 hover:text-light-primary hover:dark:text-dark-primary"
+            className="w-10 h-10 hover:text-light-primary-main hover:dark:text-dark-primary-main"
           />
         </button>
         <button
@@ -65,13 +65,13 @@ const Navbar = () => {
         >
           <FontAwesomeIcon
             icon={faLinkedin}
-            className="w-10 h-10 hover:text-light-primary hover:dark:text-dark-primary"
+            className="w-10 h-10 hover:text-light-primary-main hover:dark:text-dark-primary-main"
           />
         </button>
         <button onClick={handleThemeSwitch} title="dark-toggle">
           <FontAwesomeIcon
             icon={faCircleHalfStroke}
-            className="w-10 h-10 hover:text-light-primary hover:dark:text-dark-primary"
+            className="w-10 h-10 hover:text-light-primary-main hover:dark:text-dark-primary-main"
           />
         </button>
       </div>

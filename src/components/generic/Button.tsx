@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 const style = (className: string | undefined) => {
   if (className != undefined) return className;
   else
-    return "py-[16px] px-[16px] bg-light-primary dark:bg-dark-primary text-light-text dark:text-light-text rounded-lg";
+    return "py-[16px] px-[16px] bg-light-primary-main hover:bg-light-primary-hover active:bg-light-primary-active hover:outline hover:outline-light-text outline:border-2 dark:bg-dark-primary-main dark:hover:bg-dark-primary-hover dark:active:bg-dark-primary-active dark:hover:outline-dark-text text-light-text dark:text-light-text rounded-lg";
 };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(

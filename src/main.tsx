@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import "./index.css";
 import "@fontsource/poppins"; // Defaults to weight 400
@@ -36,6 +37,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    <div>
+      <Toaster />
+    </div>
     <RouterProvider router={router} />
   </React.StrictMode>
 );

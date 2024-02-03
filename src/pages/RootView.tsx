@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import NavbarMobile from "../components/NavbarMobile";
 
 const RootView = () => {
   return (
@@ -12,6 +13,7 @@ const RootView = () => {
         className="max-w-[1440px] mx-auto py-[50px] fixed w-full inset-0 h-[80px]"
       >
         <Navbar />
+        <NavbarMobile />
       </section>
       <Outlet />
     </div>

@@ -13,7 +13,8 @@ const setLabelStyle = (labelStyle: string | undefined) => {
 
 const setInputStyle = (inputStyle: string | undefined) => {
   if (inputStyle != undefined) return inputStyle;
-  else return "bg-light-input rounded-md w-full h-[200px] p-[16px]";
+  else
+    return "bg-light-input rounded-md w-full h-[200px] p-[16px] dark:text-light-text";
 };
 
 const InputArea = forwardRef<HTMLTextAreaElement, InputArea>(({ ...props }) => {
@@ -24,7 +25,12 @@ const InputArea = forwardRef<HTMLTextAreaElement, InputArea>(({ ...props }) => {
           {props.label}
         </label>
       </div>
-      <textarea className={setInputStyle(props.inputStyle)} id={props.id} />
+      <textarea
+        className={setInputStyle(props.inputStyle)}
+        id={props.id}
+        onChange={props.onChange}
+        value={props.value}
+      />
     </>
   );
 });
