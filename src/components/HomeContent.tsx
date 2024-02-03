@@ -7,7 +7,7 @@ const HomePage = () => {
       className="flex flex-col justify-center gap-4 h-full mx-[96px]"
     >
       <div title="name" className="tracking-wider">
-        <h1 className="text-5xl underline underline-offset-[12px] decoration-light-primary dark:decoration-dark-primary my-6 tracking-wider">
+        <h1 className="text-5xl underline underline-offset-[12px] decoration-light-primary-main dark:decoration-dark-primary-main my-6 tracking-wider">
           Hi, I'm Tomas
         </h1>
         <h1 className="text-2xl">A Software Developer based in South Wales</h1>
@@ -15,7 +15,7 @@ const HomePage = () => {
           Currently working as the Lead Software Developer at{" "}
           <a
             href="https://www.sncmsuk.com/"
-            className="text-light-primary dark:text-dark-primary hover:underline"
+            className="text-light-primary-main dark:text-dark-primary-main hover:underline"
           >
             Sierra Nevada Corporation Mission Systems UK
           </a>
