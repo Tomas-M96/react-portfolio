@@ -35,6 +35,9 @@ export default {
           text: "#F4FAFF",
         },
       },
+      height: {
+        "screen-minus-nav": "calc(100vh - 80px)",
+      },
     },
   },
   plugins: [],
