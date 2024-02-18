@@ -15,10 +15,9 @@ jobs:
       - name: Build
         run: npm ci && npm run build:no-tsc
         env: 
-          NODE_ENV: Production
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
-          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+          VITE_EMAILJS_SERVICE_ID: "${{ secrets.EMAILJS_SERVICE_ID }}"
+          VITE_EMAILJS_TEMPLATE_ID: "${{ secrets.EMAILJS_TEMPLATE_ID }}"
+          VITE_EMAILJS_PUBLIC_KEY: "${{ secrets.EMAILJS_PUBLIC_KEY }}"
       - name: print var
         run: echo "The variable is ${{ secrets.EMAILJS_PUBLIC_KEY }}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
