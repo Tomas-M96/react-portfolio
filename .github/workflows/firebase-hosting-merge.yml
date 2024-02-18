@@ -12,14 +12,15 @@ jobs:
     environment: Production
     steps:
       - uses: actions/checkout@v3
-      - name: Build
+      - name: Build & Deploy
         run: npm ci && npm run build:no-tsc
-        env: 
+        env:
           VITE_EMAILJS_SERVICE_ID: "${{ secrets.EMAILJS_SERVICE_ID }}"
           VITE_EMAILJS_TEMPLATE_ID: "${{ secrets.EMAILJS_TEMPLATE_ID }}"
           VITE_EMAILJS_PUBLIC_KEY: "${{ secrets.EMAILJS_PUBLIC_KEY }}"
-      - name: print var
-        run: echo "The variable is ${{ secrets.EMAILJS_PUBLIC_KEY }}"
+          VITE_LINKEDIN_LINK: "${{ secrets.LINKEDIN_LINK}}"
+          VITE_GITHUB_LINK: "${{ secrets.LINK_GITHUB }}"
+          VITE_CV_LINK: "${{ secrets.CV_LINK }}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"

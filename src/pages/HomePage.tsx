@@ -21,9 +21,10 @@ const HomePage = () => {
 
   const socialsClickHandler = (selection: string) => {
     if (selection === "linkedin")
-      window.open("https://www.linkedin.com/in/tomasmoore96/");
+      window.open(import.meta.env.VITE_LINKEDIN_LINK);
     else if (selection === "github")
-      window.open("https://github.com/Tomas-M96");
+      window.open(import.meta.env.VITE_GITHUB_LINK);
+    else if (selection === "cv") window.open(import.meta.env.VITE_CV_LINK);
   };
 
   return (
@@ -53,7 +54,9 @@ const HomePage = () => {
           </div>
         </div>
         <div title="download-button">
-          <Button>Download CV</Button>
+          <Button onClick={socialsClickHandler.bind(null, "cv")}>
+            Download CV
+          </Button>
         </div>
         <div className="flex flex-row justify-center items-center gap-8">
           <button
