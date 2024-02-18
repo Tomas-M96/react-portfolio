@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+
 import { faBars, faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState("light");
+  const location = useLocation();
 
   useEffect(() => {
     if (theme === "dark") {
@@ -19,6 +22,10 @@ const NavbarMobile = () => {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   const handleThemeSwitch = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -53,7 +60,12 @@ const NavbarMobile = () => {
           </button>
         </div>
         {isOpen && (
-          <div className="flex flex-col gap-6 text-center items-center justify-center h-full bg-light-background dark:bg-dark-background">
+          <motion.div
+            initial={{ opacity: 0, y: -30 }} // Start position: hidden and slightly above its final position
+            animate={{ opacity: 1, y: 0 }} // End position: fully visible and in its final position
+            transition={{ duration: 0.2, ease: "easeOut" }} // Animation duration and easing function
+            className="flex flex-col gap-6 text-center items-center justify-center h-full bg-light-background dark:bg-dark-background"
+          >
             <button className="tracking-wider underline-offset-8 hover:underline hover:decoration-light-primary-main hover:dark:decoration-dark-primary-main">
               <Link to={"/"}>Home</Link>
             </button>
@@ -84,7 +96,7 @@ const NavbarMobile = () => {
               </button>
             </div>
             <div className="w-full h-[1px] bg-light-text dark:bg-dark-text" />
-          </div>
+          </motion.div>
         )}
       </nav>
     </>

@@ -73,7 +73,7 @@ const ContactForm = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
+        () => {
           setStateMessage("Message sent!");
           toast.success(stateMessage);
           setIsSubmitting(false);
@@ -82,7 +82,7 @@ const ContactForm = () => {
             setStateMessage("");
           }, 5000); //hide message after 5 seconds
         },
-        (error) => {
+        () => {
           setStateMessage("Something went wrong!");
           toast.error(stateMessage);
           setIsSubmitting(false);
@@ -95,7 +95,7 @@ const ContactForm = () => {
 
   return (
     <form
-      className="flex flex-col justify-center items-center gap-4 w-1/3 h-full"
+      className="flex flex-col justify-center items-center gap-4 w-full h-full"
       onSubmit={handleFormSubmit}
       id="contact-form"
     >
